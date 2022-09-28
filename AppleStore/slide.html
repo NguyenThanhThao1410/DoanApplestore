@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/gioithieu.css">
+  <title>Giới Thiệu</title>
+</head>
+<body>
+  <header>
+ <section class="showcase">
+    <header>
+      <h2 class="logo">APPLE</h2>
+      <div class="toggle "></div>
+    </header>
+    <video playsinline autoplay muted loop>
+ <source src="video/gioithieu.mp4" type="video/mp4">
+ </video>
+ <div class="overlay"></div>
+    <div class="text">
+      <h2>Never Stop To </h2> 
+      <h3>Exploring The World</h3>
+      <p>I think if you do something and it turns out pretty good, then you should go do something else wonderful, not dwell on it for too long. Just figure out what’s next.</p>
+      <a href="trangchu.html">STORE</a>
+    </div>
+    <ul class="social">
+      <li><a href="https://www.facebook.com/tai.thanh.77312" target="_blank"><img src="https://i.ibb.co/x7P24fL/facebook.png"></a></li>
+      <li><a href="#"><img src="https://i.ibb.co/Wnxq2Nq/twitter.png"></a></li>
+      <li><a href="#"><img src="https://i.ibb.co/ySwtH4B/instagram.png"></a></li>
+    </ul>
+  </section>
+<div class="menu">
+    <ul>
+      <li><a href="trangchu.html">Store</a></li>
+      <li><a href="#">Mac</a></li>
+      <li><a href="#">iPhone</a></li>
+      <li><a href="#">iPad</a></li>
+      <li><a href="#">Watch</a></li>
+    </ul>
+  </div>
+
+  <script>
+    const menuToggle = document.querySelector('.toggle');
+      const showcase = document.querySelector('.showcase');
+
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        showcase.classList.toggle('active');
+      })
+  </script>
+</body>
+</html>

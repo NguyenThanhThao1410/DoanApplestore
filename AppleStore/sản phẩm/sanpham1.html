@@ -1,0 +1,765 @@
+<html lang="en">
+<head>
+
+  <title>Sản Phẩm</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined|Material+Icons" rel="stylesheet">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.row6{
+	background: rgba(0,0,0,0.8);
+	color: white;
+	font-size: 17px;
+	margin-top: 70px;
+	height: auto;
+}
+.bottom a{
+	color: white;
+	text-decoration: none;
+}
+.row6{
+	display: flex;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  scroll-behavior: smooth;
+  line-height: 1.5;
+  background-color: #FFF;
+}
+
+.responsive-container img {
+  max-width: 100%;
+  display: block;
+}
+
+.responsive-container a {
+  color: inherit;
+  font-weight: bold;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 1px solid;
+  background-color: transparent;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+}
+
+.responsive-container {
+  max-width: 1080px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.link-button {
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  border-radius: 0.375rem;
+  padding: 0.5em 1.25em;
+  color: #fff;
+}
+.link-button i {
+  font-size: 1.25rem;
+  margin-left: 0.5rem;
+}
+
+main {
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.grid-column {
+  display: flex;
+  flex-direction: column;
+}
+.grid-column > * + * {
+  margin-top: 2rem;
+}
+
+.product {
+  border-radius: 0.25rem;
+  text-decoration: none;
+  font-weight: 400;
+  transition: 0.15s ease;
+  overflow: hidden;
+}
+.product:hover, .product:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.25rem pink;
+}
+.product:hover .product-content, .product:focus .product-content {
+  border-color: transparent;
+}
+
+.product-image {
+  border-radius: 0.25rem 0.25rem 0 0;
+  overflow: hidden;
+}
+
+.product-content {
+  padding: 1rem;
+  border-left: 1px solid #dedede;
+  border-right: 1px solid #dedede;
+  border-bottom: 1px solid #dedede;
+  border-radius: 0 0 0.25rem 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 0.15s ease;
+  background-color: #FFF;
+}
+
+.product-action {
+  color: #000;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.25rem;
+  font-size: 1.25rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+.product-action:hover {
+  background-color: #ebebeb;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-title {
+  font-size: 1.125rem;
+  line-height: 1.25;
+}
+
+.product-price {
+  margin-top: 0.25rem;
+}
+
+.credits {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 10rem;
+  color: #777;
+  font-size: 0.875rem;
+}
+.credits a {
+  display: block;
+}
+
+@media all and (max-width: 600px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.5rem;
+  }
+
+  .grid-column > * + * {
+    margin-top: 1.5rem;
+  }
+}
+.menu{
+	width: 100%;
+	height: 120px;
+	background: rgba(0,0,0,0.8);
+}
+.menu{
+	width: 100%;
+	height: 48px;
+	margin: 0px auto;
+}
+.menu ul{
+	list-style: none;
+	margin-top: 0px;
+	margin-left: 0px;
+	text-align: center;
+}
+.menu ul li{
+	display: inline-block;
+	padding:10px;
+}
+.menu ul li a{
+	text-decoration: none;
+	font-size: 16px;
+	font-weight: bold;
+	color: white;
+	font-weight: 400;
+	padding: 11px 8px;
+	opacity: 80%;
+}
+.menu ul li a img{
+	vertical-align: middle;
+	width: 24px;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: black;
+  min-width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 15%;
+}
+
+.dropdown-content a {
+  
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  
+}
+
+.dropdown-content a:hover {
+  
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+</style>
+
+
+</head>
+
+<body translate="no">
+  <div class="container">
+  	<div class="menu">
+			<ul>
+				<li class="logo">
+					<a href="trangchu.html" target="_blank">
+						<img src="hình/logo2.png">
+					</a>
+				</li>
+				<li>
+					<a href="">
+						Cửa Hàng
+					</a>
+				</li>
+				<li>
+					<a href="#mac" >
+						Mac
+					</a>
+				</li>
+				<li>
+					<a href="#ipad" >
+						iPad
+					</a>
+				</li>
+				<li>
+					<a href="#iphone" >
+						iPhone
+					</a>
+				</li>
+				<li>
+					<a href="#watch" >
+						Watch
+					</a>
+				</li>
+				<li>
+					<a href="#ari" >
+						AriPods
+					</a>
+				</li>
+				<li class="kinhlup">
+					<a href="">
+						<img src="hình/kinhlup3.jpg">
+					</a>
+				</li>
+				<li>
+					<div class="dropdown">
+						<div class="dropbtn">
+							<a href="" target="_blank">
+								<img src="hình/bag3.jpg">
+							</a>
+							</div>
+						<div class="dropdown-content">
+							<a href="" target="_blank">Bag</a>
+							<a href="login.html" target="_blank">Account</a>
+							<a href="dangki.html" target="_blank">Sign up</a>
+							</div>
+						</div>
+				</li>
+			</ul>
+		</div>
+  </div>
+
+<main>
+	<div class="responsive-container">
+		<div class="row1">
+			<a name="iphone"></a>
+			<h1>iPhone</h1>
+			<div class="grid">
+				<div class="grid-column">
+									<a class="product" href="chi tiết sản phẩm\iphone\iphone13.html">
+						<div class="product-image">
+							<img src="hình/iphone/13a.png" width="286px">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">iPhone 13 Pro Max</h2>
+								<p class="product-price">35.000.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+					<a class="product" href="chi tiết sản phẩm\iphone\iphone11.html">
+						<div class="product-image">
+								<img src="hình/iphone/11.jfif" width="286px">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">iphone 11</h2>
+								<p class="product-price">14.300.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+				</div>
+
+				<div class="grid-column">
+					<a class="product" href="chi tiết sản phẩm\iphone\iphone12pro.html">
+						<div class="product-image">
+							<img src="hình/iphone/12.jfif" width="286px">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">iPhone 12</h2>
+								<p class="product-price">15.000.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+					<a class="product" href="chi tiết sản phẩm\iphone\iphoneX.html">
+						<div class="product-image">
+							<img src="hình/iphone/X.png">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">iPhone X 64G</h2>
+								<p class="product-price">7.990.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+					
+				</div>
+
+				<div class="grid-column">
+					<a class="product" href="chi tiết sản phẩm\iphone\iphoneXr.html">
+						<div class="product-image">
+							<img src="hình/iphone/xs.jpg">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">iPhone Xr</h2>
+								<p class="product-price">11.390.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+					<a class="product" href="chi tiết sản phẩm\iphone\iphone8plus.html">
+						<div class="product-image">
+							<img src="hình/iphone/8.jpg">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">iPhone 8 Plus</h2>
+								<p class="product-price">10.080.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+
+		<div class="row2">
+			<a name="ipad"></a>
+			<h1>iPad</h1>
+			<div class="grid">
+				<div class="grid-column">
+									<a class="product" href="chi tiết sản phẩm\ipad\Apple iPad Pro 12.9 inch (2020) Wi-Fi + 4G, 256GB.html">
+						<div class="product-image">
+							<img src="https://www.viettablet.com/images/thumbnails/480/516/detailed/41/apple-ipad-pro-129-inch-2020-wifi-4g-lte-128-256-512gb-1tb-2_b12q-r0.jpg" width="286px">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">iPad Pro 12.9 inch 512GB</h2>
+								<p class="product-price">29.190.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+
+					<a class="product" href="chi tiết sản phẩm\ipad\Apple iPad mini 6 (2021), Wi-Fi + 5G.html">
+						<div class="product-image">
+							<img src="https://i.pinimg.com/564x/3c/7c/da/3c7cda584ccdac58e74ea1ef79e2240f.jpg">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">Apple iPad mini 6 (2021), WiFi + 5G</h2>
+								<p class="product-price">₫18.550.000</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+			
+				</div>
+				<div class="grid-column">
+					<a class="product" href="chi tiết sản phẩm\ipad\Apple iPad Air Gen 4th Wi-Fi + Cellular 256GB.html">
+						<div class="product-image">
+							<img src="https://online.univ.coop/catalog/files/item/80606858.jpg">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">Apple iPad Air Gen 4th Wi-Fi + Cellular 256GB</h2>
+								<p class="product-price">22.990.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+					<a class="product" href="chi tiết sản phẩm\ipad\Apple iPad Pro 12.9 inch (2021) M1, Wi-Fi.html">
+						<div class="product-image"> 
+							<img src="https://i.pinimg.com/564x/1e/18/d8/1e18d8873ed3445eba3d7602c86ce7ee.jpg">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">Apple iPad Pro 12.9 inch (2021) M1, Wi-Fi</h2>
+								<p class="product-price">27.890.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+
+				</div>
+				<div class="grid-column">
+					<a class="product" href="chi tiết sản phẩm\ipad\Apple iPad Pro 12.9 inch (2020) Wi-Fi + 4G, 256GB.html">
+						<div class="product-image">
+							<img src="https://upgreat.ee/wp-content/uploads/2021/09/ipad-pro-11-select-wifi-silver-202104_FMT_WHH.jpg">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">Apple iPad Pro 12.9 inch (2020) Wi-Fi + 4G, 256GB</h2>
+								<p class="product-price">30.490.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+					
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="row3">
+			<a name="mac"></a>
+			<h1>Macbook</h1>
+			<div class="grid">
+				<div class="grid-column">
+									<a class="product" href="chi tiết sản phẩm\mac\Apple iMac 24 2021 Retina 4.5K.html">
+						<div class="product-image">
+							<img src="https://thenewxgear.com/wp-content/uploads/2021/09/Apple-iMac-m1-24-Green-1.jpg" width="286px">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">Apple iMac 24" 2021 Retina 4.5K M1/8-Core CPU/7-Core GPU/8GB/256GB SSD</h2>
+								<p class="product-price">₫33.990.000</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+
+					<a class="product" href="chi tiết sản phẩm\mac\Apple iMac 21.5 Retina 4K.html">
+						<div class="product-image">
+							<img src="https://images.fpt.shop/unsafe/fit-in/585x390/filters:quality(90):fill(white)/fptshop.com.vn/Uploads/Originals/2020/8/13/637329235349438272_imac-21-5-2020-bac-1.png">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">Apple iMac 21.5" Retina 4K 3.0GHz Core i5 256GB SSD MHK33SA/A</h2>
+								<p class="product-price">36.490.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+			
+				</div>
+				<div class="grid-column">
+					<a class="product" href="chi tiết sản phẩm\mac\Apple iMac 27 Retina 5K.html">
+						<div class="product-image">
+							<img src="https://cdn.shopify.com/s/files/1/0306/8677/products/21_DockBigSurTheDesert05_51_752e93de-2bd0-448b-983a-0a15dbe1c1cb.jpg?v=1608131319">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">Apple iMac 27" Retina 5K core i5/3.1GHZ 6C/8GB/256GB/RP5300-SOA MXWT2SA/A</h2>
+								<p class="product-price">₫44.990.000</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+					<a class="product" href="chi tiết sản phẩm\mac\Apple MacBook Pro M1.html">
+						<div class="product-image"> 
+							<img src="https://maccafe.vn/wp-content/uploads/2021/11/macbook-pro-16inch-m1-pro-silver-12.jpeg">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">Apple MacBook Pro M1 2020 8GB/256GB</h2>
+								<p class="product-price">33.990.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+
+				</div>
+				<div class="grid-column">
+					<a class="product" href="chi tiết sản phẩm\mac\Apple macBook Pro M1 16 inch.html">
+						<div class="product-image">
+							<img src="https://macone.vn/wp-content/uploads/2020/11/Macbook-Air-2020-ARM.png">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">Apple MacBook Air M1 2020 16GB RAM / 256GB SSD</h2>
+								<p class="product-price">31.515.300 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+					
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="row4">
+			<a name="watch"></a>
+			<h1>Apple watch</h1>
+			<div class="grid">
+				<div class="grid-column">
+									<a class="product" href="chi tiết sản phẩm\watch\Apple watch Series 3. html">
+						<div class="product-image">
+							<img src="http://img.websosanh.vn/v2/users/root_product/images/dong-ho-thong-minh-apple-watch/ilhb1jqj6pgin.jpg" width="100%">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">Apple Watch Series 3 (GPS)</h2>
+								<p class="product-price">5.510.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+
+					<a class="product" href="">
+						<div class="product-image">
+							<img src="https://cf.shopee.vn/file/94ff9f2ccea4cff54794f07c20802dd3" width="100%">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">Apple Watch Nike Series 5 40mm Nhôm (GPS+ Cellular) Dây Cao Su</h2>
+								<p class="product-price">8.490.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+			
+				</div>
+				<div class="grid-column">
+					<a class="product" href="chi tiết sản phẩm\watch\Apple watch Series 6. html">
+						<div class="product-image">
+							<img src="https://a-static.mlcdn.com.br/618x463/apple-watch-series-6-cellular-gps-40-mm-aluminio-prata-pulseira-esportiva-branco-m06m3be-a/lojaiplace/215524/b47b90b0e2ce0c99912394cb2aca3a8d.jpg">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">Apple Watch Series 6 (GPS + Cellular) (dây Cao Su)</h2>
+								<p class="product-price">12.650.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+					<a class="product" href="#">
+						<div class="product-image"> 
+							<img src="https://macf5.vn/wp-content/uploads/2020/09/macf5-apple-watch-series-6-gold-stainless-steel-milanese-loop-2.jpg">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">Apple Watch Series 6 (GPS + Cellular) Stainless Steel (Thép không gỉ/ Dây Milanese)</h2>
+								<p class="product-price">21.450.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+
+				</div>
+				<div class="grid-column">
+					<a class="product" href="#">
+						<div class="product-image">
+							<img src="https://ecsmedia.pl/c/apple-se-gps-cellular-40-mm-sliwkowy-b-iext63602794.jpg">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">Apple Watch SE (GPS + Cellular) Dây Cao Su</h2>
+								<p class="product-price">₫9.090.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+					
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+		<br>
+		<div class="row5">
+			<a name="ari"></a>
+			<h1>AriPods</h1>
+			<div class="grid">
+				<div class="grid-column">
+									<a class="product" href="chi tiết sản phẩm\aripod\Apple Aripods 3rd gen.html">
+						<div class="product-image">
+							<img src="http://product.hstatic.net/1000384805/product/1_9483c75f90034340827c01fd43596a6c_grande.jpg" >
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">Apple AirPods 3rd gen</h2>
+								<p class="product-price">4.990.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+
+					<a class="product" href="chi tiết sản phẩm\aripod\Apple Aripods Pro.html">
+						<div class="product-image">
+							<img src="https://mac24h.vn/images/detailed/47/FF0F4950-6E11-465B-A633-8FD59689409F.jpeg?t=1629384155">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">Apple AirPods Pro</h2>
+								<p class="product-price">5.090.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+			
+				</div>
+				<div class="grid-column">
+					<a class="product" href="chi tiết sản phẩm\aripod\Apple Aripods Max.html">
+						<div class="product-image">
+							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7e/Apple_airpods_max_1.jpg/1200px-Apple_airpods_max_1.jpg">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">Apple AirPods Max</h2>
+								<p class="product-price">7.990.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+					<a class="product" href="chi tiết sản phẩm\aripod\Apple Aripods with Charging Case 2nd gen.html">
+						<div class="product-image"> 
+							<img src="https://cf.shopee.vn/file/1553529b098197d0493e41cde92c011e">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">Apple AirPods with Charging Case 2nd gen</h2>
+								<p class="product-price">3.190.000 đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+
+				</div>
+				<div class="grid-column">
+					<a class="product" href="chi tiết sản phẩm\aripod\Beats Studio Buds – True Wireless Noise Cancelling Earphones.html ">
+						<div class="product-image">
+							<img src="https://www.viettablet.com/images/thumbnails/480/516/detailed/27/tai-nghe-airpod-viettablet.jpg" height= "65%">
+						</div>
+						<div class="product-content">
+							<div class="product-info">
+								<h2 class="product-title">Tai nghe Bluetooth AirPods 1 Apple </h2>
+								<p class="product-price">2.990.000đ</p>
+							</div>
+							<button class="product-action"><i class="material-icons-outlined">favorite_border</i></button>
+						</div>
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row6">
+				<ul class="bottom">
+					<h4>Hệ thống phân phối sản phẩm của Apple</h4>
+					Địa chỉ cửa hàng: <a href="">255, An Dương Vương, Quận 5, tp.HCM</a>
+					<br>
+					<h4>Giới thiệu</h4>
+					<h4> Trung tâm sửa chữa & bảo hàng 24/7 </h4>
+					<h4> Trung tâm bảo hàng chính hãng</h4>
+					<h4> Hợp tác kinh doanh</h4>
+				</ul>
+				<ul class="bottom2">
+					<h4> Hướng dẫn mua hàng</h4>
+					<h4> Hướng dẫn mua hàng online trả góp</h4>
+					<h4> Vận chuyển - thanh toán</h4>
+					<h4> Chính sách đổi trả / bảo hành</h4>
+					<h4> Điều khoản sử dụng</h4>
+				</ul>
+				</div>
+			</div>
+</main>
+</body>
+</html>
